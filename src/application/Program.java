@@ -1,18 +1,13 @@
 package application;
 
-import java.util.Scanner;
-
-import boardgame.Board;
+import chess.ChessMatch;
 
 public class Program {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		
-		Board board = new Board(8, 8);
-		
-		sc.close();
-		
+		ChessMatch chessMatch = new ChessMatch();
+		UI.printBoard(chessMatch.getPiece());
 
 	}
 

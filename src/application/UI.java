@@ -78,31 +78,27 @@ public class UI {
 
 	public static void printBoard(ChessPiece[][] piece) {
 		for (int r=0; r<piece.length; r++) {
-			System.out.print(ANSI_YELLOW);
-			System.out.print((8 - r) + " ");
-			System.out.print(ANSI_RESET);
-			
+			System.out.print(ANSI_YELLOW + (8 - r) + " " + ANSI_RESET);
+						
 			for (int c=0; c<piece.length; c++) {
 				printPiece(piece[r][c], false);
 			}
 			System.out.println();
 		}
-		System.out.print(ANSI_YELLOW);
-		System.out.println("  a b c d e f g h");
-		System.out.println(ANSI_RESET);
+		System.out.println(ANSI_YELLOW + "  a b c d e f g h" + ANSI_RESET);
 
 	}
 	
 	public static void printBoard(ChessPiece[][] piece, boolean[][] possibleMoves) {
 		for (int r=0; r<piece.length; r++) {
-			System.out.print((8 - r) + " ");
+			System.out.print(ANSI_YELLOW + (8 - r) + " " + ANSI_RESET);
 			
 			for (int c=0; c<piece.length; c++) {
 				printPiece(piece[r][c], possibleMoves[r][c]);
 			}
 			System.out.println();
 		}
-		System.out.println("  a b c d e f g h");
+		System.out.println(ANSI_YELLOW + "  a b c d e f g h" + ANSI_RESET);
 
 	}
 

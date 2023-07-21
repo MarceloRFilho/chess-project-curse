@@ -78,14 +78,18 @@ public class UI {
 
 	public static void printBoard(ChessPiece[][] piece) {
 		for (int r=0; r<piece.length; r++) {
+			System.out.print(ANSI_YELLOW);
 			System.out.print((8 - r) + " ");
+			System.out.print(ANSI_RESET);
 			
 			for (int c=0; c<piece.length; c++) {
 				printPiece(piece[r][c], false);
 			}
 			System.out.println();
 		}
+		System.out.print(ANSI_YELLOW);
 		System.out.println("  a b c d e f g h");
+		System.out.println(ANSI_RESET);
 
 	}
 	
